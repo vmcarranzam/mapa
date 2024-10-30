@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Entidad Ejemplo 1",
+        "pais": "España",
+        "direccion": "Calle Ejemplo 123",
+        "telefono": "123-456-7890",
+        "email": "ejemplo@entidad.com"
+    },
+    {
+        "nombre": "Entidad Ejemplo 2",
+        "pais": "México",
+        "direccion": "Avenida Reforma 456",
+        "telefono": "987-654-3210",
+        "email": "contacto@ejemplo.com"
+    }
+]
