@@ -13,20 +13,31 @@ body {
     font-family: 'Nunito Sans';
     font-weight: 400;
     font-size: 1rem;
-    background-color: #2d6a4f;
+    background-color: none;
     color: white;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+}
+
+.img-header{
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin-top: -10%;
 }
 
 .header-container h1 {
-    margin: 0;
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 10%;
     font-family: 'Playfair Display';
     font-weight: 800;
 }
 
 .header-container p {
-    margin: 5px 0 20px;
+    position: inherit;
+    margin-left: 10%;
+    margin-top: -5%;
+    margin-bottom: 2%;
 }
 
 /* Full-width map container */
@@ -37,6 +48,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 #interactiveMap {
