@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interactivo</title>
-    <link rel="stylesheet" href="mapa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Providers Map</title>
+  <link rel="stylesheet" href="mapa.css">
 </head>
 <body>
+
+  <div class="header-container">
+    <h1>Global Providers Map</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  </div>
+  
+  <div class="main-container">
     <div id="map-container">
         <!-- Paste SVG content here -->
         <!-- This will contain paths with the data-country attribute added -->
@@ -959,6 +966,37 @@
             </circle>
            </svg>            
     </div>
+  
+    <div class="identity-card-container">
+      <!-- Contenedor para la tarjeta de identidad -->
+      <div class="identity-card" id="provider-info">
+        <h2 id="provider-name">Nombre de la Entidad</h2>
+        <p id="provider-address">Dirección</p>
+        <p id="provider-phone">Número de Teléfono</p>
+        <p id="provider-countries">Países</p>
+        <a href="#" id="provider-website">Sitio Web</a>
+        <div class="social-icons">
+          <a href="#" id="provider-fb">FB</a>
+          <a href="#" id="provider-ig">IG</a>
+        </div>
+        <p id="provider-service">Servicios</p>
+        <p id="provider-requirements">Requisitos</p>
+
+           <!-- Navigation buttons -->
+           <div class="nav-buttons">
+            <button id="prev-btn">Anterior</button>
+            <button id="next-btn">Siguiente</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
 
     <!-- Tooltip for country names -->
     <div id="tooltip" style="display: none;"></div>
