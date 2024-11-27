@@ -1,161 +1,43 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: Arial, sans-serif;
 }
 
-.header-container, .footer-container {
+#map-container {
+    position: relative;
     width: 100%;
-    font-family: 'Nunito Sans';
-    font-weight: 400;
-    font-size: 1rem;
-    background-color: none;
-    color: white;
-    text-align: left;
-}
-
-.img-header{
-    display: block;
-    width: 100%;
-    height: 10%;
-    margin-top: -1%;
-}
-
-.header-container h1 {
-    position: absolute;
-    margin-top: -14.5%;
-    margin-left: 10%;
-    font-family: 'Playfair Display';
-    font-weight: 800;
-}
-
-.header-container p {
-    position: inherit;
-    margin-left: 10%;
-    margin-top: -10%;
-    margin-bottom: 7%;
-}
-
-/* Full-width map container */
-
-svg{
-    outline: none;
-}
-
-.map-container {
-    width: 100%;
-    height: 80vh; /* Adjust height as needed */
+    height: 100vh;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    margin-top: 2%;
+    background-color: #f0f0f0;
 }
 
-#interactiveMap {
-    cursor: grab;
-    transition: transform 0.3s ease;
-    transform-origin: center center;
-    width: 100%; /* Ensures map fills container width */
-    height: 100%;
-    border: none;
+#world-map {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
 }
 
-/* Country styles */
-.country {
-    fill: #a0c4ff; /* Default color for countries */
-    stroke: #2d6a4f;
+path {
+    fill: #c0c0c0;
+    stroke: #000;
     stroke-width: 0.5;
     transition: fill 0.3s ease;
 }
 
-.country:hover {
-    fill: #5a9bd3; /* Color change on hover */
+path:hover {
+    fill: #ffa500;
 }
 
-/* Fixed position entity card on the right */
-.entity-card {
-    position: fixed;
-    top: 20%; /* Adjust to center vertically */
-    right: 20px; /* Offset from the right side */
-    width: 300px;
-    max-width: 90%; /* Responsive width on smaller screens */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #e0e2e2;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure it overlays the map */
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.entity-card h2 {
-    color:#2b9643;
-    font-family: 'Nunito Sans';
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-top: 0;
-    text-align: center;
-}
-
-.entity-card p {
-    color: #606060;
-    font-family: 'Nunito Sans';
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 90%;
-    margin: 10px 0;
-    
-}
-
-.img-footer{
-    width: 100%;
-    height: 10%;
-    margin-top: 1%;
-}
-
-.p-footer{
-    color: #22543d;
-    text-align: center;
-    font-size: 1rem;
-
-}
-/* Zoom controls positioned at the bottom left */
-.zoom-controls {
+.country-label {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    left: 2%;
-    top: 80%;
-}
-
-.zoom-controls button {
-    width: 40px;
-    height: 40px;
-    margin: 5px 0;
-    font-size: 18px;
-    background-color: #e0e2e2;
-    color: black;
-    border: none;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.zoom-controls button:hover {
-    background-color: #22543d;
-    color: white;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .entity-card {
-        width: 80%;
-        right: 10px;
-    }
+    font-size: 14px;
+    transform: translate(-50%, -150%);
+    white-space: nowrap;
+    z-index: 10;
+    display: none;
 }
