@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('world-map').addEventListener('mousemove', (event) => {
         const target = event.target;
-        if (target.tagName === 'path' && target.hasAttribute('data-country')) {
-            const countryName = target.getAttribute('data-country');
+        if (target.tagName === 'path' && target.hasAttribute('name')) {
+            const countryName = target.getAttribute('name');
             tooltip.textContent = countryName;
             tooltip.style.display = 'block';
             tooltip.style.left = `${event.pageX}px`;
